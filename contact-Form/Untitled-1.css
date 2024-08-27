@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --clr: #34A8ff;
+    --bg-clr: #0C0D12;
+    --form-bg-clr: #29313c;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-clr);
+}
+form {
+    background-color: var(--form-bg-clr);
+    padding: 60px 80px 60px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 50px;
+    font-size: 1.5em;
+}
+.form-group {
+    position: relative;
+    width: 300px;
+    margin-bottom: 40px;
+}
+.form-group input,
+.form-group textarea {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #999;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    letter-spacing: 0.15em;
+}
+.form-group label {
+    position: absolute;
+    padding: 10px 0;
+    left: 0;
+    pointer-events: none;
+    text-transform: uppercase;
+    color: #999;
+}
+.form-group label span {
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.05em;
+    transition: 0.2s ease-in-out;
+}
+.form-group input:focus ~ label span,
+.form-group input:valid ~ label span,
+.form-group textarea:focus ~ label span,
+.form-group textarea:valid ~ label span {
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+.form-group input:focus,
+.form-group input:valid,
+.form-group textarea:focus,
+.form-group textarea:valid {
+    border-bottom: 2px solid var(--clr);
+}
+.form-group input[type="submit"] {
+    background-color: var(--clr);
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    color: var(--bg-clr);
+    font-weight: 500;
+    cursor: pointer;
+}
+form p {
+    color: #fff;
+    text-transform: uppercase;
+}
+form p a {
+    color: var(--clr);
+    text-decoration: none;
+    font-weight: 500;
+}
